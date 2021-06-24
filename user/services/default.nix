@@ -1,0 +1,5 @@
+[
+  ./dunst
+  ./polybar
+  ./random-background
+]

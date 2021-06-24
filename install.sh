@@ -1,0 +1,1 @@
+user/scripts/sh/install-nix-config.sh

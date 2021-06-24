@@ -1,0 +1,10 @@
+[
+  ./fish
+  ./git
+  ./htop
+  ./rofi
+  ./taskwarrior
+  ./urxvt
+  ./vim
+  ./xmonad
+]
