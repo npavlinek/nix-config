@@ -3,8 +3,6 @@
 {
   home.packages = with pkgs;
     [
-      aerc
-      any-nix-shell
       cloc
       dunst
       hack-font

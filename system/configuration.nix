@@ -35,7 +35,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   programs = {
-    fish.enable = true;
     ssh.startAgent = true;
     vim.defaultEditor = true;
   };
@@ -89,7 +88,7 @@
   users.users.nkpvk = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    shell = pkgs.fish;
+    shell = pkgs.bash;
   };
 
   system.stateVersion = "21.05";

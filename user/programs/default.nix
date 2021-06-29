@@ -1,5 +1,5 @@
 [
-  ./fish
+  ./bash
   ./git
   ./htop
   ./rofi
