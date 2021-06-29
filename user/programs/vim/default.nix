@@ -3,9 +3,9 @@
 let
   myPlugins = with pkgs.vimPlugins; [
     fzf-vim
-    gruvbox-community
     nord-vim
     vim-glsl
+    vim-lsc
   ];
 
   myConfig = builtins.readFile ./config.vim;
