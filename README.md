@@ -6,7 +6,6 @@
 
 * [home-manager][1]
 
-
 If installing for the first time or upgrading [home-manager][1] to the latest
 version:
 
