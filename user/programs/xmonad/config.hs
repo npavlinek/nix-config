@@ -20,7 +20,7 @@ main = do
     [D.nameAllowReplacement, D.nameReplaceExisting, D.nameDoNotQueue]
   xmonad $ myConfig dbus
 
-myConfig dbus = docks def { terminal           = "urxvt"
+myConfig dbus = docks def { terminal           = "st"
                           , focusFollowsMouse  = False
                           , borderWidth        = 2
                           , workspaces         = myWorkspaces

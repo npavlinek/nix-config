@@ -3,7 +3,7 @@
   ./git
   ./htop
   ./rofi
-  ./urxvt
+  ./st
   ./vim
   ./xmonad
 ]

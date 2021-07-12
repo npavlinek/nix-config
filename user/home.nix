@@ -6,9 +6,11 @@
       cloc
       dunst
       hack-font
+      jetbrains-mono
       keepassxc
       ncdu
       speedcrunch
+      stCustom
       tree
       unzip
       xclip
