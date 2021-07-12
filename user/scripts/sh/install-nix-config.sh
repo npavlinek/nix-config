@@ -3,11 +3,13 @@
 set -e
 
 nix_config_root="$HOME/src/nix-config"
+nix_config_dest="$HOME/.config/nixpkgs"
 
 copy_user_config() {
   printf 'copying user config...\n'
-  mkdir -p $HOME/.config/nixpkgs/
-  cp -r $nix_config_root/user/* $HOME/.config/nixpkgs/
+  [ -d $nix_config_dest ] && rm -rf $nix_config_dest
+  mkdir -p $nix_config_dest
+  cp -r $nix_config_root/user/* $nix_config_dest/
 }
 
 copy_system_config() {
