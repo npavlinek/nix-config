@@ -1,0 +1,11 @@
+vim.opt.statusline = ''
+vim.opt.statusline:append('%f ')
+vim.opt.statusline:append('%h')
+vim.opt.statusline:append('%m')
+vim.opt.statusline:append('%r')
+vim.opt.statusline:append('%=')
+vim.opt.statusline:append('%y')
+vim.opt.statusline:append('[%{&fileformat}]')
+vim.opt.statusline:append('[%{&fileencoding}] ')
+vim.opt.statusline:append('[%04l/%04L]')
+vim.opt.statusline:append('[%04c-%04v]')
