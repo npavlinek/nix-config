@@ -21,6 +21,6 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
-vim.cmd('colorscheme onedark')
+vim.cmd('colorscheme warlock')
 
 vim.g.fzf_preview_window = {}
