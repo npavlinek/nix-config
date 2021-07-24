@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation {
   name = "shell-scripts";
-  srcs = [ ./edit-vimrc.sh ./edit-xmonad.sh ./install-nix-config.sh ];
+  srcs = [ ./install-nix-config.sh ];
 
   dontUnpack = true;
   dontPatch = true;

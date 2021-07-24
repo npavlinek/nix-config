@@ -1,6 +1,5 @@
 [
-  ./fish
-  ./python
+  ./open-pdf
   ./sh
   ./start-ssh-agent
 ]
