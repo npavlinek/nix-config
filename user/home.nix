@@ -3,9 +3,6 @@
 {
   home.packages = with pkgs;
     [
-      cloc
-      dunst
-      hack-font
       jetbrains-mono
       keepassxc
       ncdu
@@ -14,7 +11,6 @@
       tree
       unzip
       xclip
-      xmonad-log
     ] ++ map (pkg: callPackage pkg { }) (import ./scripts);
 
   imports = (import ./programs) ++ (import ./services);

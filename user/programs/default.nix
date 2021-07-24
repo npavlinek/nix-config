@@ -1,4 +1,5 @@
 [
+  ./awesome
   ./bash
   ./git
   ./htop
@@ -6,5 +7,4 @@
   ./rofi
   ./st
   ./vim
-  ./xmonad
 ]

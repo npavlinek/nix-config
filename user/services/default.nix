@@ -1,5 +1,3 @@
 [
-  ./dunst
-  ./polybar
-  ./random-background
+  ./gpg-agent
 ]

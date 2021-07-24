@@ -11,11 +11,14 @@
       ${pkgs.gnome3.networkmanagerapplet}/bin/nm-applet &
     '';
 
-    windowManager.xmonad = {
+    windowManager.awesome = {
       enable = true;
-      enableContribAndExtras = true;
-      config = ./config.hs;
-      extraPackages = hp: [ hp.dbus ];
     };
+  };
+
+  home.file."awesome-config" = {
+    source = ./config;
+    target = ".config/awesome";
+    recursive = true;
   };
 }

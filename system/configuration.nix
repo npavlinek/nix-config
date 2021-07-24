@@ -61,13 +61,12 @@
       };
 
       displayManager = {
-        defaultSession = "none+xmonad";
+        defaultSession = "none+awesome";
         lightdm.enable = true;
       };
 
-      windowManager.xmonad = {
+      windowManager.awesome = {
         enable = true;
-        enableContribAndExtras = true;
       };
 
       # TODO: Set up screen locker
