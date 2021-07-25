@@ -14,7 +14,7 @@ copy_user_config() {
 
 copy_system_config() {
   printf 'copying system config...\n'
-  doas cp $nix_config_root/system/configuration.nix /etc/nixos/
+  doas cp $nix_config_root/system/* /etc/nixos/
 }
 
 set_up_home_manager() {
@@ -36,6 +36,12 @@ install_user() {
 install_system() {
   copy_system_config
   printf 'installing system config...\n'
+  doas nixos-rebuild switch
+}
+
+install_system_and_upgrade() {
+  copy_system_config
+  printf 'installing system config and upgrading...\n'
   doas nixos-rebuild switch --upgrade
 }
 
@@ -49,8 +55,15 @@ case $1 in
   system)
     install_system
     ;;
+  system-upgrade)
+    install_system_and_upgrade
+    ;;
   all)
     install_system
+    install_user
+    ;;
+  all-upgrade)
+    install_system_and_upgrade
     install_user
     ;;
 esac
