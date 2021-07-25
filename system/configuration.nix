@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./current.nix
+  ];
 
   boot = {
     cleanTmpDir = true;
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
+    loader.efi.canTouchEfiVariables = true;
   };
 
   environment.systemPackages = with pkgs; [ file killall ];
@@ -17,7 +17,6 @@
 
   nix = {
     autoOptimiseStore = true;
-
     gc = {
       automatic = true;
       dates = "weekly";
@@ -26,7 +25,6 @@
   };
 
   networking = {
-    hostName = "ritchie";
     networkmanager.enable = true;
   };
 
