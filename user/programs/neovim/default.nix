@@ -1,16 +1,6 @@
 { pkgs, ... }:
 
-let
-  vim-warlock = pkgs.vimUtils.buildVimPlugin {
-    name = "vim-warlock";
-    src = pkgs.fetchFromGitHub {
-      owner = "hardselius";
-      repo = "warlock";
-      rev = "12c7772d35fd6956940d716bb71c9f3855a45a12";
-      sha256 = "0vii8fd098mbxd2b29cgm3kj9a0lln9jf2mg5hlxkf3zsp752lcf";
-    };
-  };
-in {
+{
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
@@ -29,12 +19,12 @@ in {
     '';
     plugins = with pkgs.vimPlugins; [
       fzf-vim
+      gruvbox-community
       nvim-compe
       nvim-lspconfig
       vim-jsx-pretty
       vim-ledger
       vim-nix
-      vim-warlock
     ];
     viAlias = true;
     vimAlias = true;

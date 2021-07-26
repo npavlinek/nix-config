@@ -18,7 +18,6 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
-vim.opt.termguicolors = true
-vim.cmd('colorscheme warlock')
+vim.cmd('colorscheme gruvbox')
 
 vim.g.fzf_preview_window = {}
