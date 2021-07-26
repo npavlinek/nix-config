@@ -5,7 +5,10 @@
     [
       jetbrains-mono
       keepassxc
+      ledger
       ncdu
+      noto-fonts
+      noto-fonts-extra
       speedcrunch
       stCustom
       tree

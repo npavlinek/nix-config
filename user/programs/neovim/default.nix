@@ -32,6 +32,7 @@ in {
       nvim-compe
       nvim-lspconfig
       vim-jsx-pretty
+      vim-ledger
       vim-nix
       vim-warlock
     ];
