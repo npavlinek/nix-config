@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+selected_book=$(find ~/shared/main/doc -type f -iname '*.pdf' | fzf)
+if [ ! -z "$selected_book" ]; then
+  zathura "$selected_book" &
+  disown
+fi

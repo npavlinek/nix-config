@@ -1,5 +1,5 @@
 [
-  ./open-pdf
+  ./readpdf
   ./sh
   ./start-ssh-agent
 ]

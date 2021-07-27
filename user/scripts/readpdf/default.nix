@@ -1,8 +1,8 @@
 { stdenv, pkgs }:
 
 stdenv.mkDerivation {
-  name = "open-pdf-script";
-  src = ./open-pdf.sh;
+  name = "readpdf-script";
+  src = ./readpdf;
 
   nativeBuildInputs = with pkgs; [
     fzf
