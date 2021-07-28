@@ -3,7 +3,7 @@
 {
   programs.rofi = {
     enable = true;
-    font = "Hack 10";
-    theme = "Arc-Dark";
+    font = "JetBrains Mono 10";
+    theme = "gruvbox-dark";
   };
 }
