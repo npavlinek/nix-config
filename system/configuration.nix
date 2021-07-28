@@ -58,6 +58,17 @@
         touchpad.disableWhileTyping = true;
       };
 
+      # Disable mouse acceleration
+      config = ''
+        Section "InputClass"
+          Identifier "mouse accel"
+          Driver "libinput"
+          MatchIsPointer "on"
+          Option "AccelProfile" "flat"
+          Option "AccelSpeed" "0"
+        EndSection
+      '';
+
       displayManager = {
         defaultSession = "none+awesome";
         lightdm.enable = true;
