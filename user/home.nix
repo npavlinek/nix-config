@@ -3,12 +3,12 @@
 {
   home.packages = with pkgs;
     [
+      dejavu_fonts
       jetbrains-mono
       keepassxc
       ledger
+      liberation_ttf
       ncdu
-      noto-fonts
-      noto-fonts-extra
       speedcrunch
       stCustom
       tree
