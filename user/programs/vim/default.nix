@@ -2,18 +2,15 @@
 
 let
   myPlugins = with pkgs.vimPlugins; [
-    fzf-vim
-    nord-vim
-    vim-glsl
-    vim-lsc
+    gruvbox-community
+    vim-ledger
+    vim-nix
   ];
-
-  myConfig = builtins.readFile ./config.vim;
-  myPluginConfig = builtins.readFile ./plugins.vim;
+  myConfig = builtins.readFile ./vimrc;
 in {
   programs.vim = {
     enable = true;
-    extraConfig = myConfig + myPluginConfig;
+    extraConfig = myConfig;
     plugins = myPlugins;
   };
 }

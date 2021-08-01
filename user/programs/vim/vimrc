@@ -1,0 +1,60 @@
+" `home-manager` automatically loads `vim-sensible`, I don't want that. This is
+" a workaround that prevents `vim-sensible` from being loaded.
+let g:loaded_sensible = 'yes'
+
+set nocompatible
+
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set colorcolumn=+1
+set hidden
+set ignorecase
+set incsearch
+set lazyredraw
+set nohlsearch
+set nojoinspaces
+set number
+set ruler
+set shortmess+=I
+set smartcase
+set spelllang=en_us,sl
+set splitbelow
+set splitright
+set textwidth=80
+set wildmenu
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+if has('gui_running')
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
+  set guifont=Cascadia_Code:h10
+endif
+
+syntax on
+set background=dark
+colorscheme gruvbox
+
+" Some common typos...
+command! -bang -nargs=? -complete=file W w<bang> <args>
+command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+command! -bang Q q<bang>
+command! -bang Qa qa<bang>
+command! -bang QA qa<bang>
+
+filetype plugin indent on
+
+augroup MyAutoCommands
+  autocmd!
+
+  autocmd FileType c setl cindent et sts=2 sw=2 ts=2
+  autocmd FileType cpp setl cindent cino=:0,g0,l1,N-s et sts=2 sw=2 ts=2
+  autocmd FileType gitcommit setl spell
+augroup END
