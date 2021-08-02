@@ -1,9 +1,8 @@
 ============
  nix-config
 ============
-------------------------------
- Personal NixOS configuration
-------------------------------
+
+Personal NixOS configuration
 
 Installation
 ============
@@ -16,7 +15,7 @@ Prerequisites
 Initial
 -------
 
-::
+.. code:: bash
 
   copy-user-config
   setup-home-manager
@@ -28,7 +27,7 @@ This example uses ``sudo``, but you can also use ``doas``, or something similar.
 All that's required is that the tool retains your environment, because the
 *HOME* environment variable is used.
 
-::
+.. code:: bash
 
   sudo -E copy-system-config
   sudo nixos-rebuild switch  # or another sub-command
@@ -36,7 +35,7 @@ All that's required is that the tool retains your environment, because the
 User config
 -----------
 
-::
+.. code:: bash
 
   copy-user-config
   home-manager switch  # or another sub-command
