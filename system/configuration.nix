@@ -37,15 +37,9 @@
     vim.defaultEditor = true;
   };
 
-  security = {
-    doas = {
-      enable = true;
-      extraRules = [{
-        groups = [ "wheel" ];
-        keepEnv = true;
-      }];
-    };
-    sudo.enable = false;
+  security.sudo = {
+    enable = true;
+    execWheelOnly = true;
   };
 
   services = {
