@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -e
+
+home_manager_config_source="$HOME/src/nix-config"
+cp -r $home_manager_config_source/system/* /etc/nixos/

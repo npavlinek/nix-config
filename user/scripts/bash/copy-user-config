@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+home_manager_config_source="$HOME/src/nix-config"
+home_manager_config_dest="$HOME/.config/nixpkgs"
+
+[[ -d $home_manager_config_dest ]] && rm -rf $home_manager_config_dest
+mkdir -p $home_manager_config_dest
+cp -r $home_manager_config_source/user/* $home_manager_config_dest/
