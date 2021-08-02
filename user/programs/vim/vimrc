@@ -34,7 +34,7 @@ if has('gui_running')
   set guioptions-=T
   set guioptions-=r
   set guioptions-=L
-  set guifont=Cascadia_Code:h10
+  set guifont=DejaVu_Sans_Mono:h10
 endif
 
 syntax on
