@@ -23,9 +23,9 @@ Initial
 System config
 -------------
 
-This example uses ``sudo``, but you can also use ``doas``, or something similar.
-All that's required is that the tool retains your environment, because the
-*HOME* environment variable is used.
+This example uses ``sudo``, but you can also use ``doas``, or something
+similar. All that's required is that the tool retains your environment,
+because the *HOME* environment variable is used.
 
 .. code:: bash
 
