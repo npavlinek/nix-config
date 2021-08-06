@@ -21,7 +21,7 @@ set smartcase
 set spelllang=en_us,sl
 set splitbelow
 set splitright
-set textwidth=80
+set textwidth=72
 set wildmenu
 
 set expandtab
@@ -41,7 +41,10 @@ syntax on
 set background=dark
 colorscheme gruvbox
 
-" Some common typos...
+" Highlight trailing whitespace
+match ErrorMsg '\s\+$'
+
+" Some common typos
 command! -bang -nargs=? -complete=file W w<bang> <args>
 command! -bang -nargs=? -complete=file Wq wq<bang> <args>
 command! -bang -nargs=? -complete=file WQ wq<bang> <args>
