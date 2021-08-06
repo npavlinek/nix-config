@@ -43,4 +43,5 @@ User config
 License
 =======
 
-MIT
+Unlicense, see ``LICENSE.rst`` for more information or visit
+`<http://unlicense.org/>`_.
