@@ -2,7 +2,6 @@
 
 let
   myPlugins = with pkgs.vimPlugins; [
-    gruvbox-community
     vim-ledger
     vim-nix
   ];
