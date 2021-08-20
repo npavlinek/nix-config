@@ -8,12 +8,15 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set colorcolumn=+1
+set formatoptions-=t
 set hidden
 set ignorecase
 set incsearch
+set laststatus=2
 set lazyredraw
 set nohlsearch
 set nojoinspaces
+set nowrap
 set number
 set ruler
 set shortmess+=I
@@ -39,7 +42,8 @@ if has('gui_running')
 endif
 
 syntax on
-colorscheme ron
+colorscheme saturnite
+highlight ErrorMsg ctermbg=red
 
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -64,13 +68,13 @@ filetype plugin indent on
 augroup MyAutoCommands
   autocmd!
 
+  autocmd BufRead,BufNewFile *.h setl filetype=c
   autocmd FileType c setl cindent cino=:0 noet sts=8 sw=8 ts=8
   autocmd FileType cpp setl cindent cino=:0,g0,l1,N-s et sts=2 sw=2 ts=2
   autocmd FileType css setl et sw=2 sts=2 ts=2
   autocmd FileType gitcommit setl spell
-  autocmd FileType h setl cindent cino=:0 noet sts=8 sw=8 ts=8
   autocmd FileType html setl et sw=2 sts=2 ts=2
-  autocmd FileType python setl et fo-=t sw=4 sts=4 ts=4
+  autocmd FileType python setl et sw=4 sts=4 ts=4
   autocmd FileType scss setl et sw=2 sts=2 ts=2
   autocmd FileType tex setl et sw=2 sts=2 ts=2
   autocmd FileType xml setl et sw=2 sts=2 ts=2
