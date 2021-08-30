@@ -14,6 +14,8 @@ set ignorecase
 set incsearch
 set laststatus=2
 set lazyredraw
+set list
+set listchars=tab:→\ 
 set nohlsearch
 set nojoinspaces
 set nowrap
@@ -28,11 +30,6 @@ set textwidth=80
 set wildignore=*.o
 set wildmenu
 
-set noexpandtab
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
-
 if has('gui_running')
   set guioptions-=m
   set guioptions-=T
@@ -44,10 +41,6 @@ endif
 syntax on
 colorscheme saturnite
 highlight ErrorMsg ctermbg=red
-
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
 
 " Highlight trailing whitespace
 match ErrorMsg '\s\+$'
@@ -69,7 +62,7 @@ augroup MyAutoCommands
   autocmd!
 
   autocmd BufRead,BufNewFile *.h setl filetype=c
-  autocmd FileType c setl cindent cino=:0 noet sts=8 sw=8 ts=8
+  autocmd FileType c setl cindent cino=:0,t0 noet sts=8 sw=8 ts=8
   autocmd FileType cpp setl cindent cino=:0,g0,l1,N-s et sts=2 sw=2 ts=2
   autocmd FileType css setl et sw=2 sts=2 ts=2
   autocmd FileType gitcommit setl spell
