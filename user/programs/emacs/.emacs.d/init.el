@@ -5,14 +5,18 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(require 'use-package)
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 ;; Put custom, backups and auto save files into the temporary file directory on
 ;; the current system.
 (let ((custom-temporary-file-directory
        (concat temporary-file-directory "emacs-tmp")))
+  (ignore-errors
+    (make-directory custom-temporary-file-directory))
   (setq custom-file
-        (concat custom-temporary-file-directory "/custom.el"))
+        (expand-file-name "custom.el" custom-temporary-file-directory))
   (setq backup-directory-alist
         `((".*" . ,custom-temporary-file-directory)))
   (setq auto-save-file-name-transforms
@@ -23,7 +27,6 @@
 (setq inhibit-startup-screen t)
 
 (use-package color-theme-sanityinc-tomorrow
-  :ensure t
   :config
   (load-theme 'sanityinc-tomorrow-night t))
 
@@ -50,17 +53,16 @@
 
 ;; Packages
 
-(use-package cmake-mode
-  :ensure t)
+(use-package cmake-mode)
 
 (use-package ledger-mode
-  :ensure t)
+  :mode "\\.ledger\\'")
 
 (use-package magit
-  :ensure t)
+  :bind ("C-x g" . magit-status))
 
 (use-package nov
-  :ensure t
+  :mode "\\.epub\\'"
   :config
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
   (setq nov-text-width 80))
