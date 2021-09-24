@@ -46,6 +46,7 @@
     xserver = {
       enable = true;
       layout = "us";
+      xkbOptions = "ctrl:nocaps";
 
       libinput = {
         enable = true;

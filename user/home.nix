@@ -4,6 +4,7 @@
   home.packages = with pkgs;
     [
       dejavu_fonts
+      iosevka
       jetbrains-mono
       keepassxc
       ledger
