@@ -9,7 +9,6 @@
     shellAliases = {
       ll = "ls -lh";
       ls = "ls --color -F";
-      vi = "vim";
     };
     shellOptions = [ "histappend" ];
   };

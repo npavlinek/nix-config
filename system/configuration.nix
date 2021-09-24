@@ -64,14 +64,7 @@
         EndSection
       '';
 
-      displayManager = {
-        defaultSession = "none+awesome";
-        lightdm.enable = true;
-      };
-
-      windowManager.awesome = {
-        enable = true;
-      };
+      displayManager.startx.enable = true;
 
       # TODO: Set up screen locker
       # xautolock = {

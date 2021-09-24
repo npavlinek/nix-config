@@ -25,7 +25,6 @@
     chromium.enable = true;
     feh.enable = true;
     firefox.enable = true;
-    fzf.enable = true;
     home-manager.enable = true;
     man.generateCaches = true;
     zathura.enable = true;
