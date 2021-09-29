@@ -36,13 +36,17 @@
 (tool-bar-mode -1)
 
 (setq-default indent-tabs-mode nil
-              show-trailing-whitespace t
               truncate-lines t
               fill-column 80)
 
 (setq backup-by-copying t
       version-control t
       delete-old-versions t)
+
+;; Hightlight text going over the column limit.
+(require 'whitespace)
+(setq whitespace-style '(face empty lines-tail trailing))
+(global-whitespace-mode t)
 
 (set-frame-font "Iosevka Extended-11" nil t)
 
