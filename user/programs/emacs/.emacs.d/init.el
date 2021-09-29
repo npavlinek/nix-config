@@ -48,9 +48,10 @@
 (setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
 
-(set-frame-font "Iosevka Extended-11" nil t)
+(set-frame-font "DejaVu Sans Mono-10" nil t)
 
 (defun np/personal-c++-style ()
+  (setq c-basic-offset 4)
   (c-set-style "stroustrup"))
 
 (add-hook 'c++-mode-hook 'np/personal-c++-style)
@@ -64,9 +65,3 @@
 
 (use-package magit
   :bind ("C-x g" . magit-status))
-
-(use-package nov
-  :mode "\\.epub\\'"
-  :config
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-  (setq nov-text-width 80))
