@@ -54,6 +54,7 @@
   (setq c-basic-offset 4)
   (c-set-style "stroustrup"))
 
+(add-hook 'c-mode-hook 'np/personal-c++-style)
 (add-hook 'c++-mode-hook 'np/personal-c++-style)
 
 ;; Packages
