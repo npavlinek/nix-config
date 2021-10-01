@@ -51,8 +51,10 @@
 (set-frame-font "DejaVu Sans Mono-10" nil t)
 
 (defun np/personal-c++-style ()
+  (c-set-style "stroustrup")
   (setq c-basic-offset 4)
-  (c-set-style "stroustrup"))
+  (c-set-offset 'inline-open '0))
+
 
 (add-hook 'c-mode-hook 'np/personal-c++-style)
 (add-hook 'c++-mode-hook 'np/personal-c++-style)
